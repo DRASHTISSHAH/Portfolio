@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drashti Shah | Software Engineer</title>
+    <meta name="description"
+        content="Portfolio of Drashti Shah, a Software Engineer specializing in full-stack development and machine learning.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="blob-bg">
+        <div class="blob shape-1"></div>
+        <div class="blob shape-2"></div>
+        <div class="blob shape-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">Drashti<span>.</span></a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <span class="greeting">Hello, I'm</span>
+            <h1 class="name">Drashti Shah</h1>
+            <h2 class="role">
+                <span class="typing-text">Software Engineer & AI Enthusiast</span>
+            </h2>
+            <p class="bio">
+                Passionate about building full-stack web applications and applying machine learning to solve real-world
+                problems.
+                I thrive at the intersection of robust backend architectures and intuitive user experiences.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View My Work <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="https://github.com/DRASHTISSHAH" target="_blank" class="btn btn-icon"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/drashti-shah05" target="_blank" class="btn btn-icon"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="glass-card main-card">
+                <div class="card-header">
+                    <div class="circles">
+                        <span class="circle red"></span>
+                        <span class="circle yellow"></span>
+                        <span class="circle green"></span>
+                    </div>
+                </div>
+                <div class="code-snippet">
+                    <pre><code><span class="keyword">def</span> <span class="function">innovate</span>():
+    <span class="keyword">while</span> <span class="boolean">True</span>:
+        code.write()
+        learn.new_models()
+        deploy.to_production()
+        
+innovate()</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <p>A selection of my recent work bridging Web Development and Machine Learning.</p>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card glass-card">
+                <div class="project-content">
+                    <div class="project-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3>CareerTrack</h3>
+                    <p class="project-subtitle">AI-Powered Job Application Tracker</p>
+                    <ul class="project-bullets">
+                        <li>Implemented secure user authentication (signup, login, logout) using Django’s built-in system.</li>
+                        <li>Built complete CRUD functionality for managing job applications with fields such as company, role, location, status, applied date, and notes.</li>
+                        <li>Enabled search, filtering, and sorting for efficient organization.</li>
+                        <li>Designed an interactive dashboard displaying total applications, status distribution, and key metrics like interview rate, offer rate, and rejection rate.</li>
+                        <li>Integrated AI-powered interview insights to generate role-specific questions and preparation strategies.</li>
+                        <li>Developed an AI career coach chatbot with persistent chat history for personalized guidance.</li>
+                        <li>Structured backend using modular Django architecture and managed environment variables securely.</li>
+                    </ul>
+                    <div class="tags">
+                        <span>Django</span><span>Python</span><span>SQLite</span><span>JS</span><span>Groq API</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="http://drashti.pythonanywhere.com" target="_blank" class="btn-sm"><i class="fa-solid fa-link"></i> Live Demo</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card glass-card">
+                <div class="project-content">
+                    <div class="project-icon"><i class="fa-solid fa-book-open"></i></div>
+                    <h3>BookHub</h3>
+                    <p class="project-subtitle">Used Book Marketplace Application</p>
+                    <ul class="project-bullets">
+                        <li>Built a GUI-based application using Java (Swing/JavaFX) for intuitive interaction.</li>
+                        <li>Integrated Firebase Authentication for secure user registration and login.</li>
+                        <li>Used Firebase Firestore / Realtime Database to store and manage user data and book listings.</li>
+                        <li>Implemented full CRUD operations for book listings.</li>
+                        <li>Enabled real-time data synchronization for instant updates across users.</li>
+                        <li>Added search and filtering features to enhance usability.</li>
+                        <li>Ensured data validation and consistency using Firebase rules and client-side checks.</li>
+                        <li>Designed a scalable and modular architecture.</li>
+                    </ul>
+                    <div class="tags">
+                        <span>Java</span><span>Firebase</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card glass-card">
+                <div class="project-content">
+                    <div class="project-icon"><i class="fa-solid fa-users"></i></div>
+                    <h3>NUV Connect</h3>
+                    <p class="project-subtitle">Student Networking Platform</p>
+                    <ul class="project-bullets">
+                        <li>Built chat and discussion forum features for peer interaction.</li>
+                        <li>Implemented event creation and management system.</li>
+                        <li>Designed a responsive and interactive user interface.</li>
+                        <li>Managed backend data using MySQL.</li>
+                        <li>Enabled dynamic content updates for better engagement.</li>
+                    </ul>
+                    <div class="tags">
+                        <span>HTML/CSS</span><span>JavaScript</span><span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card glass-card">
+                <div class="project-content">
+                    <div class="project-icon"><i class="fa-solid fa-film"></i></div>
+                    <h3>Movie Recommender System</h3>
+                    <p class="project-subtitle">Machine Learning Model</p>
+                    <ul class="project-bullets">
+                        <li>Implemented content-based filtering using similarity measures.</li>
+                        <li>Performed data preprocessing and feature engineering.</li>
+                        <li>Used cosine similarity and vectorization techniques.</li>
+                        <li>Provided real-time recommendations based on user input.</li>
+                    </ul>
+                    <div class="tags">
+                        <span>Python</span><span>Pandas</span><span>Scikit-learn</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card glass-card">
+                <div class="project-content">
+                    <div class="project-icon"><i class="fa-solid fa-hand-pointer"></i></div>
+                    <h3>Air Canvas</h3>
+                    <p class="project-subtitle">Gesture-Based Drawing System</p>
+                    <ul class="project-bullets">
+                        <li>Implemented real-time hand tracking using MediaPipe.</li>
+                        <li>Used OpenCV for image processing and frame manipulation.</li>
+                        <li>Mapped gestures to drawing actions.</li>
+                        <li>Enabled features like color selection and canvas control via gestures.</li>
+                        <li>Optimized for low-latency performance.</li>
+                    </ul>
+                    <div class="tags">
+                        <span>Python</span><span>OpenCV</span><span>MediaPipe</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card glass-card">
+                <div class="project-content">
+                    <div class="project-icon"><i class="fa-solid fa-microscope"></i></div>
+                    <h3>Skin Cancer Classification</h3>
+                    <p class="project-subtitle">Deep Learning – Ongoing</p>
+                    <ul class="project-bullets">
+                        <li>Implementing CNN models such as DenseNet201, ResNet101, and MobileNetV2.</li>
+                        <li>Performing image preprocessing, augmentation, and normalization.</li>
+                        <li>Applying transfer learning to improve performance.</li>
+                        <li>Continuously optimizing using precision, recall, and F1-score.</li>
+                        <li>Exploring techniques to handle class imbalance and reduce overfitting.</li>
+                    </ul>
+                    <div class="tags">
+                        <span>Python</span><span>TensorFlow</span><span>Keras</span><span>CNN</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="project-card glass-card">
+                <div class="project-content">
+                    <div class="project-icon"><i class="fa-solid fa-notes-medical"></i></div>
+                    <h3>Breast Cancer Classification</h3>
+                    <p class="project-subtitle">Machine Learning Classification</p>
+                    <ul class="project-bullets">
+                        <li>Applied machine learning and deep learning algorithms.</li>
+                        <li>Performed data preprocessing and feature selection.</li>
+                        <li>Implemented models like Logistic Regression, SVM, and Neural Networks.</li>
+                        <li>Evaluated using accuracy, ROC-AUC, and cross-validation.</li>
+                    </ul>
+                    <div class="tags">
+                        <span>Python</span><span>Scikit-learn</span><span>TensorFlow/Keras</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 8 -->
+            <div class="project-card glass-card">
+                <div class="project-content">
+                    <div class="project-icon"><i class="fa-solid fa-tooth"></i></div>
+                    <h3>Oral Cancer Classification</h3>
+                    <p class="project-subtitle">Deep Learning Classification</p>
+                    <ul class="project-bullets">
+                        <li>Built and trained CNN-based models.</li>
+                        <li>Applied data augmentation techniques.</li>
+                        <li>Evaluated using standard classification metrics.</li>
+                        <li>Focused on improving accuracy and robustness.</li>
+                    </ul>
+                    <div class="tags">
+                        <span>Python</span><span>TensorFlow</span><span>Keras</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h2>Let's Connect</h2>
+            <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try
+                my best to get back to you!</p>
+            <a href="mailto:shahdrashti096@gmail.com" class="btn btn-primary">Say Hello</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Drashti Shah. Built with <i class="fa-solid fa-heart"></i> and code.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
