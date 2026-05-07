@@ -134,6 +134,17 @@ a {
     100% { transform: translate(-5%, -15%) scale(0.9); }
 }
 
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* UI Components */
 .glass-card {
     background: var(--glass-bg);
@@ -606,6 +617,218 @@ section {
     margin-top: auto;
 }
 
+/* Experience Section (Timeline) */
+.experience-section {
+    position: relative;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: var(--glass-border);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 50%;
+}
+
+.timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    padding-left: 0;
+    padding-right: 50%;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    width: 16px;
+    height: 16px;
+    background: var(--accent);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    box-shadow: 0 0 15px var(--accent);
+}
+
+.timeline-date {
+    position: absolute;
+    top: 26px;
+    left: calc(50% + 30px);
+    font-weight: 700;
+    color: var(--accent);
+    font-family: 'Outfit';
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    left: auto;
+    right: calc(50% + 30px);
+}
+
+.timeline-content {
+    width: 100%;
+    padding: 30px;
+    margin-left: 30px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 0;
+    margin-right: 30px;
+}
+
+.company {
+    color: var(--accent);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.skill-category {
+    padding: 32px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.category-icon {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.skill-tags span {
+    background: var(--bg-secondary);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid var(--glass-border);
+}
+
+/* Education Section */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 32px;
+}
+
+.education-card {
+    display: flex;
+    gap: 24px;
+    padding: 32px;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.education-card:hover {
+    transform: scale(1.02);
+}
+
+.education-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(124, 58, 237, 0.1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.education-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.school {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.duration {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+}
+
+.grade {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        padding-left: 50px;
+        justify-content: flex-start;
+    }
+    
+    .timeline-item:nth-child(even) {
+        padding-right: 0;
+        padding-left: 50px;
+    }
+    
+    .timeline-dot {
+        left: 20px;
+    }
+    
+    .timeline-date {
+        position: relative;
+        left: 0 !important;
+        right: 0 !important;
+        margin-bottom: 10px;
+        display: block;
+    }
+    
+    .timeline-content {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Footer */
 footer {
     padding: 80px 24px 40px;
@@ -673,4 +896,77 @@ footer {
     }
     
     .name { font-size: 2.8rem; }
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    background: var(--accent-hover);
+}
+
+/* Spotlight effect for glass cards */
+.glass-card {
+    position: relative;
+}
+
+.glass-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+        600px circle at var(--mouse-x, 0) var(--mouse-y, 0),
+        rgba(124, 58, 237, 0.08),
+        transparent 40%
+    );
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.glass-card:hover::after {
+    opacity: 1;
+}
+
+.btn-secondary {
+    background: var(--glass-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--glass-border);
+}
+
+.btn-secondary:hover {
+    background: var(--bg-secondary);
+    transform: translateY(-2px);
+    border-color: var(--accent);
 }
