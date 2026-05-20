@@ -615,6 +615,9 @@ section {
 
 .project-links {
     margin-top: auto;
+    display: flex;
+    gap: 16px;
+    align-items: center;
 }
 
 /* Experience Section (Timeline) */
